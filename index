@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Catalogue des Artistes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Catalogue des Artistes</h1>
+
+<div class="gallery">
+
+<div class="card">
+    <a href="artistes/artiste1.html">
+        <img src="images/artiste1/photo1.jpg">
+        <h3>Nom Artiste 1</h3>
+    </a>
+</div>
+
+<div class="card">
+    <a href="artistes/artiste2.html">
+        <img src="images/artiste2/photo1.jpg">
+        <h3>Nom Artiste 2</h3>
+    </a>
+</div>
+
+</div>
+
+</body>
+</html>
