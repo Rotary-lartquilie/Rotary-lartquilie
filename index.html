@@ -1,3 +1,18 @@
+
+
+<body>
+
+<header>
+<h1>Catalogue des Artistes</h1>
+<p>40 artistes • 120 œuvres exposées</p>
+
+<input
+type="text"
+id="search"
+placeholder="Rechercher un artiste..."
+style="padding:12px;width:320px;font-size:16px;border-radius:8px;border:1px solid #ccc;">
+</header>
+
 <div class="gallery">
 
     <div class="card">
@@ -280,3 +295,44 @@
         <h3>Veronika SMOLKOTINA</h3>
     </a>
 </div>
+
+<script>
+
+const search=document.getElementById('search');
+
+search.addEventListener('keyup',function(){
+
+let value=this.value.toLowerCase();
+
+document.querySelectorAll('.card').forEach(card=>{
+
+let name=card.querySelector('h3').textContent.toLowerCase();
+
+if(name.includes(value)){
+card.style.display='';
+}else{
+card.style.display='none';
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
+Très important
+Dans ce que tu m'as montré, il y a aussi cette erreur :
+</div>
+
+<div class="card">
+    <a href="artistes/elder-olgoin.html">
+Le </div> juste avant Elder OLGOIN ferme la galerie trop tôt.
+Il faut que :
+<div class="gallery">
+reste ouvert jusqu'à la toute dernière carte (Veronika SMOLKOTINA), puis seulement après :
+</div>
+pour fermer la galerie.
+Si tu veux éviter toute erreur, colle-moi maintenant le fichier index.html complet (ou envoie une capture du mode édition GitHub avec le début et la fin visibles), et je te reconstruirai un index.html complet avec les 40 artistes déjà intégrés.
+
