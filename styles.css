@@ -1,104 +1,133 @@
 body{
-    font-family: "Georgia", serif;
-    margin:0;
-    background:#f5f3ee;
-    color:#222;
+margin:0;
+background:#f8f7f4;
+color:#1f1f1f;
+font-family: Georgia, "Times New Roman", serif;
 }
 
 header{
-    text-align:center;
-    background:white;
-    padding:50px 20px;
-    border-bottom:1px solid #ddd;
+text-align;
+padding:80px 20px 50px;
+background;
 }
 
 header h1{
-    margin:0;
-    font-size:3rem;
+font-size:3.5rem;
+font-weight:300;
+letter-spacing:4px;
+margin-bottom:10px;
 }
 
 header p{
-    color:#666;
-    margin-top:10px;
+color:#666;
+margin-bottom:30px;
+}
+
+#search{
+padding:14px;
+width:380px;
+max-width:90%;
+border:1px solid #ddd;
+border-radius:40px;
+font-size:16px;
+}
+
+.alphabet{
+text-align;
+padding:20px;
+background;
+border-top:1px solid #eee;
+}
+
+.alphabet a{
+margin:0 8px;
+text-decoration;
+color:#444;
+font-weight;
 }
 
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
-    gap:30px;
-    padding:40px;
-    max-width:1600px;
-    margin:auto;
+max-width:1700px;
+margin;
+padding:60px;
+display;
+grid-template-columns(auto-fill,minmax(320px,1fr));
+gap:35px;
 }
 
 .card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.12);
-    transition:all .3s ease;
+background;
+overflow;
+transition:.35s;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-
-.card a{
-    text-decoration:none;
-    color:inherit;
+.card{
+transform(-8px);
 }
 
 .card img{
-    width:100%;
-    height:320px;
-    object-fit:cover;
+width:100%;
+height:320px;
+object-fit;
 }
 
 .card h3{
-    padding:20px;
-    text-align:center;
-    margin:0;
+text-align;
+padding:20px;
+margin:0;
+font-size:1.1rem;
+}
+
+.card a{
+color;
+text-decoration;
 }
 
 .artist-page{
-    max-width:1400px;
-    margin:auto;
-    padding:40px;
+max-width:1500px;
+margin;
+padding:60px;
 }
 
 .artist-gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-bottom:40px;
+display;
+grid-template-columns(3,1fr);
+gap:25px;
 }
 
 .artist-gallery img{
-    width:100%;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
-    transition:transform .3s;
+width:100%;
+cursor;
+transition:.3s;
 }
 
-.artist-gallery img:hover{
-    transform:scale(1.03);
+.artist-gallery img{
+transform(1.02);
 }
 
 .bio{
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    line-height:1.7;
+margin-top:50px;
+background;
+padding:40px;
+line-height:1.8;
 }
 
-.bio h2{
-    margin-top:0;
+.lightbox{
+display;
+position;
+z-index:9999;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background(0,0,0,.92);
 }
 
-.back{
-    display:inline-block;
-    margin-top:20px;
-    text-decoration:none;
+.lightbox img{
+max-width:90%;
+max-height:90%;
+position;
+top:50%;
+left:50%;
+transform(-50%,-50%);
 }
