@@ -7,14 +7,132 @@
 
 <title>Catalogue des Artistes</title>
 
-<link rel="stylesheet" href="styles.css">
+<style>
+
+body{
+    margin:0;
+    font-family:Helvetica, Arial, sans-serif;
+    background:#f7f7f7;
+    color:#222;
+}
+
+.hero{
+    background:white;
+    text-align:center;
+    padding:50px 20px;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.logo{
+    width:140px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    margin:0;
+    font-size:48px;
+    font-weight:300;
+    letter-spacing:2px;
+}
+
+.subtitle{
+    color:#777;
+    margin-top:10px;
+    font-size:18px;
+}
+
+.search-box{
+    margin-top:25px;
+    width:350px;
+    max-width:90%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.filters{
+    margin-top:20px;
+}
+
+.filters button{
+    padding:12px 20px;
+    margin:5px;
+    border:none;
+    border-radius:30px;
+    background:#005daa;
+    color:white;
+    cursor:pointer;
+}
+
+.filters button:hover{
+    opacity:0.9;
+}
+
+.alphabet{
+    max-width:1200px;
+    margin:30px auto;
+    text-align:center;
+    padding:0 20px;
+}
+
+.alphabet a{
+    display:inline-block;
+    margin:4px;
+    padding:8px 12px;
+    text-decoration:none;
+    color:#005daa;
+    font-weight:bold;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:30px;
+    padding:40px;
+    max-width:1600px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:0;
+    padding:20px;
+    text-align:center;
+    font-weight:400;
+}
+
+.card a{
+    text-decoration:none;
+    color:#222;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header class="hero">
 
-<img src="logo-rotary.jpg" class="logo" alt="Rotary">
+<img src="logo-rotary.jpg" alt="Rotary" class="logo">
 
 <h1>Catalogue des Artistes</h1>
 
@@ -25,21 +143,17 @@
 <input
 type="text"
 id="search"
+class="search-box"
 placeholder="Rechercher un artiste...">
 
 <div class="filters">
-<button class="filter-btn active" onclick="filterCards('all')">
-Tous
-</button>
-
-<button class="filter-btn" onclick="filterCards('pro')">
-Professionnels
-</button>
+<button id="allBtn">Tous les artistes</button>
+<button id="proBtn">Artistes professionnels</button>
 </div>
 
 </header>
 
-<section class="alphabet">
+<div class="alphabet">
 
 <a href="#A">A</a>
 <a href="#B">B</a>
@@ -68,7 +182,7 @@ Professionnels
 <a href="#Y">Y</a>
 <a href="#Z">Z</a>
 
-</section>
+</div>
 
 <div class="gallery">
 
@@ -360,48 +474,46 @@ Professionnels
 
 <script>
 
-const search = document.getElementById('search');
+const search=document.getElementById('search');
 
-search.addEventListener('keyup', function(){
+search.addEventListener('keyup',function(){
 
-let value = this.value.toLowerCase();
-
-document.querySelectorAll('.card').forEach(card => {
-
-let name = card.querySelector('h3').textContent.toLowerCase();
-
-card.style.display =
-name.includes(value)
-? 'block'
-: 'none';
-
-});
-
-});
-
-function filterCards(type){
-
-document.querySelectorAll('.filter-btn')
-.forEach(btn=>btn.classList.remove('active'));
-
-event.target.classList.add('active');
+let value=this.value.toLowerCase();
 
 document.querySelectorAll('.card').forEach(card=>{
 
-if(type==="all"){
-card.style.display="block";
-return;
-}
+let name=card.querySelector('h3').textContent.toLowerCase();
 
-if(card.classList.contains("pro")){
-card.style.display="block";
-}else{
-card.style.display="none";
+card.style.display=name.includes(value)?'':'none';
+
+});
+
+});
+
+document.getElementById('allBtn').onclick=function(){
+
+document.querySelectorAll('.card').forEach(card=>{
+
+card.style.display='';
+
+});
+
+};
+
+document.getElementById('proBtn').onclick=function(){
+
+document.querySelectorAll('.card').forEach(card=>{
+
+if(card.classList.contains('pro')){
+card.style.display='';
+}
+else{
+card.style.display='none';
 }
 
 });
 
-}
+};
 
 </script>
 
