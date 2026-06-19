@@ -1,8 +1,9 @@
-
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anne RUTHMANN</title>
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -11,19 +12,61 @@
 
 <header>
     <h1>Anne RUTHMANN</h1>
-    <a href="../index.html">Retour au catalogue</a>
+    <p>Artiste exposée</p>
 </header>
 
-<div class="gallery">
-    <img src="../Anne RUTHMANN/Anne RUTHMANN 1.png">
-    <img src="../Anne RUTHMANN/Anne RUTHMANN 2.png">
-    <img src="../Anne RUTHMANN/Anne RUTHMANN 3.png">
+<div class="artist-page">
+
+```
+<p>
+    <a href="../index.html">← Retour au catalogue</a>
+</p>
+
+<div class="artist-gallery">
+    <img src="../Anne RUTHMANN/Anne RUTHMANN 1.png" alt="Œuvre 1">
+    <img src="../Anne RUTHMANN/Anne RUTHMANN 2.png" alt="Œuvre 2">
+    <img src="../Anne RUTHMANN/Anne RUTHMANN 3.png" alt="Œuvre 3">
 </div>
 
-<div style="padding:30px;">
+<div class="bio">
     <h2>Biographie</h2>
-    <p>Biographie à compléter.</p>
+
+    <p>
+    Biographie à compléter.
+    </p>
+
 </div>
+```
+
+</div>
+
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-img">
+</div>
+
+<script>
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+document.querySelectorAll('.artist-gallery img').forEach(img => {
+
+    img.addEventListener('click', () => {
+
+        lightbox.style.display = 'block';
+        lightboxImg.src = img.src;
+
+    });
+
+});
+
+lightbox.addEventListener('click', () => {
+
+    lightbox.style.display = 'none';
+
+});
+
+</script>
 
 </body>
 </html>
