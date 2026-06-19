@@ -1,326 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Catalogue des Artistes</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
 
 <body>
 
-<header>
+<header class="hero">
+
+<img src="logo-rotary.png" class="logo" alt="Rotary">
+
 <h1>Catalogue des Artistes</h1>
-<p>40 artistes • 120 œuvres exposées</p>
+
+<p class="subtitle">
+40 artistes • 120 œuvres exposées
+</p>
 
 <input
 type="text"
 id="search"
-placeholder="Rechercher un artiste..."
-style="padding:12px;width:320px;font-size:16px;border-radius:8px;border:1px solid #ccc;">
+placeholder="Rechercher un artiste...">
+
+<div class="filters">
+<button class="filter-btn active" onclick="filterCards('all')">
+Tous
+</button>
+
+<button class="filter-btn" onclick="filterCards('pro')">
+Professionnels
+</button>
+</div>
+
 </header>
+
+<section class="alphabet">
+
+<a href="#A">A</a>
+<a href="#B">B</a>
+<a href="#C">C</a>
+<a href="#D">D</a>
+<a href="#E">E</a>
+<a href="#F">F</a>
+<a href="#G">G</a>
+<a href="#H">H</a>
+<a href="#I">I</a>
+<a href="#J">J</a>
+<a href="#K">K</a>
+<a href="#L">L</a>
+<a href="#M">M</a>
+<a href="#N">N</a>
+<a href="#O">O</a>
+<a href="#P">P</a>
+<a href="#Q">Q</a>
+<a href="#R">R</a>
+<a href="#S">S</a>
+<a href="#T">T</a>
+<a href="#U">U</a>
+<a href="#V">V</a>
+<a href="#W">W</a>
+<a href="#X">X</a>
+<a href="#Y">Y</a>
+<a href="#Z">Z</a>
+
+</section>
 
 <div class="gallery">
 
-    <div class="card">
-        <a href="artistes/anne-ruthmann.html">
-            <img src="Anne RUTHMANN/Anne RUTHMANN 1.png">
-            <h3>Anne RUTHMANN</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/baptiste-francoise-augris.html">
-            <img src="Baptiste Françoise AUGRIS/Baptiste Françoise AUGRIS 1.jpg">
-            <h3>Baptiste Françoise AUGRIS</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/bernard-vivent.html">
-            <img src="Bernard VIVENT/Bernard VIVENT 1.jpg">
-            <h3>Bernard VIVENT</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/carole-saint-georges-bollore.html">
-            <img src="Carole SAINT GEORGES BOLLORE (pro)/Carole Saint Georges BOLLORE 1.jpg">
-            <h3>Carole SAINT GEORGES BOLLORE</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/catherine-kouninioti.html">
-            <img src="Catherine KOUNINIOTI (pro)/Catherine KOUNINIOTI 2.jpg">
-            <h3>Catherine KOUNINIOTI</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/christine-murard.html">
-            <img src="Christine MURARD (pro)/Christine MURARD 1.jpg">
-            <h3>Christine MURARD</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/christine-ober.html">
-            <img src="Christine OBER/Christine OBER 1.jpg">
-            <h3>Christine OBER</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/chrystel-foriot.html">
-            <img src="Chrystel Foriot (pro)/Chrystel Foriot 1.png">
-            <h3>Chrystel Foriot</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/delphine-dattee.html">
-            <img src="Delphine DATTEE (pro)/Delphine DATTEE 1.png">
-            <h3>Delphine DATTEE</h3>
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="artistes/dominique-leduc.html">
-            <img src="Dominique LEDUC/Dominique LEDUC 1.jpg">
-            <h3>Dominique LEDUC</h3>
-        </a>
-    </div>
+<div class="gallery">
 
 <div class="card">
-    <a href="artistes/elder-olgoin.html">
-        <img src="Elder OLGOIN/Elder OLGOIN 1.jpg">
-        <h3>Elder OLGOIN</h3>
-    </a>
+<a href="artistes/anne-ruthmann.html">
+<img src="Anne RUTHMANN/Anne RUTHMANN 1.png">
+<h3>Anne RUTHMANN</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/fifi-dame-gning.html">
-        <img src="Fifi Dame GNING/Fifi Dame GNING 1.png">
-        <h3>Fifi Dame GNING</h3>
-    </a>
+<a href="artistes/baptiste-francoise-augris.html">
+<img src="Baptiste Françoise AUGRIS/Baptiste Françoise AUGRIS 1.jpg">
+<h3>Baptiste Françoise AUGRIS</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/florianne-roffe.html">
-        <img src="Florianne ROFFE (pro)/Florianne ROFFE 1.png">
-        <h3>Florianne ROFFE</h3>
-    </a>
+<a href="artistes/bernard-vivent.html">
+<img src="Bernard VIVENT/Bernard VIVENT 1.jpg">
+<h3>Bernard VIVENT</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/carole-saint-georges-bollore.html">
+<img src="Carole SAINT GEORGES BOLLORE (pro)/Carole Saint Georges BOLLORE 1.jpg">
+<h3>Carole SAINT GEORGES BOLLORE</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/catherine-kouninioti.html">
+<img src="Catherine KOUNINIOTI (pro)/Catherine KOUNINIOTI 2.jpg">
+<h3>Catherine KOUNINIOTI</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/christine-murard.html">
+<img src="Christine MURARD (pro)/Christine MURARD 1.jpg">
+<h3>Christine MURARD</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/francois-peirani.html">
-        <img src="François PEIRANI/François PEIRANI 1.jpg">
-        <h3>François PEIRANI</h3>
-    </a>
+<a href="artistes/christine-ober.html">
+<img src="Christine OBER/Christine OBER 1.jpg">
+<h3>Christine OBER</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/chrystel-foriot.html">
+<img src="Chrystel Foriot (pro)/Chrystel Foriot 1.png">
+<h3>Chrystel Foriot</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/delphine-dattee.html">
+<img src="Delphine DATTEE (pro)/Delphine DATTEE 1.png">
+<h3>Delphine DATTEE</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/gabriel-pellerin.html">
-        <img src="Gabriel PELLERIN (pro)/Gabriel PELLERIN 1.png">
-        <h3>Gabriel PELLERIN</h3>
-    </a>
+<a href="artistes/dominique-leduc.html">
+<img src="Dominique LEDUC/Dominique LEDUC 1.jpg">
+<h3>Dominique LEDUC</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/georges-panturu.html">
-        <img src="Georges PANTURU (pro)/Georges PANTURU 1.jpg">
-        <h3>Georges PANTURU</h3>
-    </a>
+<a href="artistes/elder-olgoin.html">
+<img src="Elder OLGOIN/Elder OLGOIN 1.jpg">
+<h3>Elder OLGOIN</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/isee-le-guillou.html">
-        <img src="Isée LE GUILLOU/Isée LE GUILLOU 1.png">
-        <h3>Isée LE GUILLOU</h3>
-    </a>
+<a href="artistes/fifi-dame-gning.html">
+<img src="Fifi Dame GNING/Fifi Dame GNING 1.png">
+<h3>Fifi Dame GNING</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/florianne-roffe.html">
+<img src="Florianne ROFFE (pro)/Florianne ROFFE 1.png">
+<h3>Florianne ROFFE</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/jack-manini.html">
-        <img src="Jack MANINI (pro)/Jack MANINI 1.png">
-        <h3>Jack MANINI</h3>
-    </a>
+<a href="artistes/francois-peirani.html">
+<img src="François PEIRANI/François PEIRANI 1.jpg">
+<h3>François PEIRANI</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/gabriel-pellerin.html">
+<img src="Gabriel PELLERIN (pro)/Gabriel PELLERIN 1.png">
+<h3>Gabriel PELLERIN</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/georges-panturu.html">
+<img src="Georges PANTURU (pro)/Georges PANTURU 1.jpg">
+<h3>Georges PANTURU</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/jean-michel-pele.html">
-        <img src="Jean-Michel PELE/Jean-Michel PELE 1.jpeg">
-        <h3>Jean-Michel PELE</h3>
-    </a>
+<a href="artistes/isee-le-guillou.html">
+<img src="Isée LE GUILLOU/Isée LE GUILLOU 1.png">
+<h3>Isée LE GUILLOU</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/jack-manini.html">
+<img src="Jack MANINI (pro)/Jack MANINI 1.png">
+<h3>Jack MANINI</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/jeansly-mouanga.html">
-        <img src="Jeansly MOUANGA/Jeansly MOUANGA 1.png">
-        <h3>Jeansly MOUANGA</h3>
-    </a>
+<a href="artistes/jean-michel-pele.html">
+<img src="Jean-Michel PELE/Jean-Michel PELE 1.jpeg">
+<h3>Jean-Michel PELE</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/karin-lansen.html">
-        <img src="Karin LANSEN (pro)/Karin LANSEN 1.jpg">
-        <h3>Karin LANSEN</h3>
-    </a>
+<a href="artistes/jeansly-mouanga.html">
+<img src="Jeansly MOUANGA/Jeansly MOUANGA 1.png">
+<h3>Jeansly MOUANGA</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/karin-lansen.html">
+<img src="Karin LANSEN (pro)/Karin LANSEN 1.jpg">
+<h3>Karin LANSEN</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/kristine-grimblett.html">
-        <img src="Kristine GRIMBLETT/Kristine GRIMBLETT 1.jpeg">
-        <h3>Kristine GRIMBLETT</h3>
-    </a>
+<a href="artistes/kristine-grimblett.html">
+<img src="Kristine GRIMBLETT/Kristine GRIMBLETT 1.jpeg">
+<h3>Kristine GRIMBLETT</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/laure-aymard.html">
+<img src="Laure AYMARD (pro)/Laure AYMARD 1.jpg">
+<h3>Laure AYMARD</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/laure-aymard.html">
-        <img src="Laure AYMARD (pro)/Laure AYMARD 1.jpg">
-        <h3>Laure AYMARD</h3>
-    </a>
+<a href="artistes/liliane-durand.html">
+<img src="Liliane DURAND/Liliane DURAND 1.png">
+<h3>Liliane DURAND</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/lina-catherine-delattre.html">
+<img src="Lina Catherine DELATTRE (pro)/Lina Catherine DELATTRE 1.png">
+<h3>Lina Catherine DELATTRE</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/marie-stahl.html">
+<img src="Marie STAHL (pro)/Marie STAHL 1.png">
+<h3>Marie STAHL</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/liliane-durand.html">
-        <img src="Liliane DURAND/Liliane DURAND 1.png">
-        <h3>Liliane DURAND</h3>
-    </a>
+<a href="artistes/marie-evelyne-bourion.html">
+<img src="Marie-Evelyne BOURION/Marie-Evelyne BOURION 1.png">
+<h3>Marie-Evelyne BOURION</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/lina-catherine-delattre.html">
-        <img src="Lina Catherine DELATTRE (pro)/Lina Catherine DELATTRE 1.png">
-        <h3>Lina Catherine DELATTRE</h3>
-    </a>
+<a href="artistes/marie-francoise-mamet.html">
+<img src="Marie-Françoise MAMET/Marie-Françoise MAMET 1.jpeg">
+<h3>Marie-Françoise MAMET</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/marso-savaro.html">
+<img src="Marso SAVARO (pro)/Marso SAVARO 1.jpg">
+<h3>Marso SAVARO</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/marie-stahl.html">
-        <img src="Marie STAHL (pro)/Marie STAHL 1.png">
-        <h3>Marie STAHL</h3>
-    </a>
+<a href="artistes/martine-mercier.html">
+<img src="Martine MERCIER/Martine MERCIER 1.jpg">
+<h3>Martine MERCIER</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/marie-evelyne-bourion.html">
-        <img src="Marie-Evelyne BOURION/Marie-Evelyne BOURION 1.png">
-        <h3>Marie-Evelyne BOURION</h3>
-    </a>
+<a href="artistes/raffaella-martin.html">
+<img src="Raffaella MARTIN/Raffaella MARTIN 1.jpg">
+<h3>Raffaella MARTIN</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/nausicaa-favart-amouroux.html">
+<img src="Nausicaa FAVART AMOUROUX (pro)/Nausicaa FAVART AMOUROUX 1.jpg">
+<h3>Nausicaa FAVART AMOUROUX</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/marie-francoise-mamet.html">
-        <img src="Marie-Françoise MAMET/Marie-Françoise MAMET 1.jpeg">
-        <h3>Marie-Françoise MAMET</h3>
-    </a>
+<a href="artistes/nouha-haj-amor.html">
+<img src="Nouha HAJ AMOR/Nouha HAJ AMOR 1.png">
+<h3>Nouha HAJ AMOR</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/marso-savaro.html">
-        <img src="Marso SAVARO (pro)/Marso SAVARO 1.jpg">
-        <h3>Marso SAVARO</h3>
-    </a>
+<a href="artistes/pape-dudu-sarr.html">
+<img src="Pape Dudu SARR/Pape Dudu SARR 1.png">
+<h3>Pape Dudu SARR</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/philippe-fabian.html">
+<img src="Philippe FABIAN (pro)/Philippe FABIAN 1.png">
+<h3>Philippe FABIAN</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/roger-palie.html">
+<img src="Roger PALIE (pro)/Roger PALIE 1.jpeg">
+<h3>Roger PALIE</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/martine-mercier.html">
-        <img src="Martine MERCIER/Martine MERCIER 1.jpg">
-        <h3>Martine MERCIER</h3>
-    </a>
+<a href="artistes/serge-nef.html">
+<img src="Serge NEF/Serge NEF 1.jpg">
+<h3>Serge NEF</h3>
+</a>
+</div>
+
+<div class="card pro">
+<a href="artistes/sophie-race-marie.html">
+<img src="Sophie RACE-MARIE (pro)/Sophie RACE-MARIE 1.jpeg">
+<h3>Sophie RACE-MARIE</h3>
+</a>
 </div>
 
 <div class="card">
-    <a href="artistes/raffaella-martin.html">
-        <img src="Raffaella MARTIN/Raffaella MARTIN 1.jpg">
-        <h3>Raffaella MARTIN</h3>
-    </a>
+<a href="artistes/thierry-disson.html">
+<img src="Thierry DISSON/Thierry DISSON 1.jpg">
+<h3>Thierry DISSON</h3>
+</a>
 </div>
 
-<div class="card">
-    <a href="artistes/nausicaa-favart-amouroux.html">
-        <img src="Nausicaa FAVART AMOUROUX (pro)/Nausicaa FAVART AMOUROUX 1.jpg">
-        <h3>Nausicaa FAVART AMOUROUX</h3>
-    </a>
+<div class="card pro">
+<a href="artistes/veronika-smolkotina.html">
+<img src="Veronika SMOLKOTINA (pro)/Veronika SMOLKOTINA 1.jpg">
+<h3>Veronika SMOLKOTINA</h3>
+</a>
 </div>
 
-<div class="card">
-    <a href="artistes/nouha-haj-amor.html">
-        <img src="Nouha HAJ AMOR/Nouha HAJ AMOR 1.png">
-        <h3>Nouha HAJ AMOR</h3>
-    </a>
 </div>
 
-<div class="card">
-    <a href="artistes/pape-dudu-sarr.html">
-        <img src="Pape Dudu SARR/Pape Dudu SARR 1.png">
-        <h3>Pape Dudu SARR</h3>
-    </a>
 </div>
-
-<div class="card">
-    <a href="artistes/philippe-fabian.html">
-        <img src="Philippe FABIAN (pro)/Philippe FABIAN 1.png">
-        <h3>Philippe FABIAN</h3>
-    </a>
-</div>
-
-<div class="card">
-    <a href="artistes/roger-palie.html">
-        <img src="Roger PALIE (pro)/Roger PALIE 1.jpeg">
-        <h3>Roger PALIE</h3>
-    </a>
-</div>
-
-<div class="card">
-    <a href="artistes/serge-nef.html">
-        <img src="Serge NEF/Serge NEF 1.jpg">
-        <h3>Serge NEF</h3>
-    </a>
-</div>
-
-<div class="card">
-    <a href="artistes/sophie-race-marie.html">
-        <img src="Sophie RACE-MARIE (pro)/Sophie RACE-MARIE 1.jpeg">
-        <h3>Sophie RACE-MARIE</h3>
-    </a>
-</div>
-
-<div class="card">
-    <a href="artistes/thierry-disson.html">
-        <img src="Thierry DISSON/Thierry DISSON 1.jpg">
-        <h3>Thierry DISSON</h3>
-    </a>
-</div>
-
-<div class="card">
-    <a href="artistes/veronika-smolkotina.html">
-        <img src="Veronika SMOLKOTINA (pro)/Veronika SMOLKOTINA 1.jpg">
-        <h3>Veronika SMOLKOTINA</h3>
-    </a>
-</div>
-
-    </div>
 
 <script>
 
-const search=document.getElementById('search');
+const search = document.getElementById('search');
 
-search.addEventListener('keyup',function(){
+search.addEventListener('keyup', function(){
 
-let value=this.value.toLowerCase();
+let value = this.value.toLowerCase();
+
+document.querySelectorAll('.card').forEach(card => {
+
+let name = card.querySelector('h3').textContent.toLowerCase();
+
+card.style.display =
+name.includes(value)
+? 'block'
+: 'none';
+
+});
+
+});
+
+function filterCards(type){
+
+document.querySelectorAll('.filter-btn')
+.forEach(btn=>btn.classList.remove('active'));
+
+event.target.classList.add('active');
 
 document.querySelectorAll('.card').forEach(card=>{
 
-let name=card.querySelector('h3').textContent.toLowerCase();
+if(type==="all"){
+card.style.display="block";
+return;
+}
 
-if(name.includes(value)){
-card.style.display='';
+if(card.classList.contains("pro")){
+card.style.display="block";
 }else{
-card.style.display='none';
+card.style.display="none";
 }
 
 });
 
-});
+}
 
 </script>
 
 </body>
 </html>
-
