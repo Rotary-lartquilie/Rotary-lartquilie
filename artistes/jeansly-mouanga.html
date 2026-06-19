@@ -2,26 +2,45 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jeansly MOUANGA</title>
 <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
 <header>
-<h1>Jeansly MOUANGA</h1>
-<p><a href="../index.html">← Retour au catalogue</a></p>
+    <h1>Jeansly MOUANGA</h1>
+    <p>Artiste exposé</p>
 </header>
 
-<div class="gallery">
-<img src="../Jeansly MOUANGA/Jeansly MOUANGA 1.png">
-<img src="../Jeansly MOUANGA/Jeansly MOUANGA 2.png">
-<img src="../Jeansly MOUANGA/Jeansly MOUANGA 3.png">
+<div class="artist-page">
+
+<p><a href="../index.html">← Retour au catalogue</a></p>
+
+<div class="artist-gallery">
+    <img src="../Jeansly MOUANGA/Jeansly MOUANGA 1.png">
+    <img src="../Jeansly MOUANGA/Jeansly MOUANGA 2.png">
+    <img src="../Jeansly MOUANGA/Jeansly MOUANGA 3.png">
 </div>
 
-<div style="max-width:900px;margin:auto;padding:40px;">
-<h2>Biographie</h2>
-<p>Biographie à compléter.</p>
+<div class="bio">
+    <h2>Biographie</h2>
+    <p>Biographie à compléter.</p>
 </div>
+
+</div>
+
+<div class="lightbox" id="lightbox"><img id="lightbox-img"></div>
+
+<script>
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightbox-img');
+document.querySelectorAll('.artist-gallery img').forEach(img=>{
+img.addEventListener('click',()=>{lightbox.style.display='block';lightboxImg.src=img.src;});
+});
+lightbox.addEventListener('click',()=>{lightbox.style.display='none';});
+</script>
 
 </body>
 </html>
