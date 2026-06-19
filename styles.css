@@ -1,20 +1,14 @@
-/* =========================
-   CATALOGUE ROTARY L'ART QUILIE
-   ========================= */
-
 body{
     margin:0;
     background:#f7f5f1;
     color:#222;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:Georgia,"Times New Roman",serif;
 }
-
-/* HEADER */
 
 header{
     background:white;
     text-align:center;
-    padding:80px 20px 60px;
+    padding:80px 20px;
     border-bottom:1px solid #e5e5e5;
 }
 
@@ -22,47 +16,43 @@ header h1{
     margin:0;
     font-size:4rem;
     font-weight:300;
-    letter-spacing:5px;
+    letter-spacing:4px;
 }
 
 header p{
-    margin-top:15px;
     color:#777;
-    font-size:1.1rem;
+    margin-top:15px;
 }
 
 #search{
-    margin-top:30px;
-    padding:15px 20px;
-    width:420px;
+    margin-top:25px;
+    width:400px;
     max-width:90%;
+    padding:14px;
+    border-radius:30px;
     border:1px solid #ddd;
-    border-radius:40px;
     font-size:16px;
-    background:white;
 }
-
-/* ACCUEIL */
 
 .gallery{
     max-width:1700px;
     margin:auto;
-    padding:60px;
+    padding:50px;
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
-    gap:40px;
+    gap:35px;
 }
 
 .card{
     background:white;
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    transition:all .3s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
 .card:hover{
     transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
 .card a{
@@ -78,14 +68,11 @@ header p{
 }
 
 .card h3{
-    margin:0;
-    padding:22px;
     text-align:center;
-    font-size:1.1rem;
+    padding:20px;
+    margin:0;
     font-weight:normal;
 }
-
-/* PAGE ARTISTE */
 
 .artist-page{
     max-width:1500px;
@@ -101,7 +88,6 @@ header p{
 
 .artist-gallery img{
     width:100%;
-    display:block;
     cursor:pointer;
     transition:.3s;
 }
@@ -115,31 +101,22 @@ header p{
     background:white;
     padding:40px;
     line-height:1.8;
-    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .bio h2{
     margin-top:0;
 }
 
-.back{
-    display:inline-block;
-    margin-bottom:30px;
-    color:#444;
-    text-decoration:none;
-}
-
-/* LIGHTBOX */
-
 .lightbox{
     display:none;
     position:fixed;
     z-index:9999;
-    left:0;
     top:0;
+    left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,.92);
+    background:rgba(0,0,0,.95);
 }
 
 .lightbox img{
