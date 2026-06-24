@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amélie CAHARD</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Amélie CAHARD</h1>
+    <p>Artiste professionnelle</p>
+</header>
+
+<div class="artist-page">
+
+<p><a href="../index.html">← Retour au catalogue</a></p>
+
+<div class="artist-gallery">
+    <img src="../Amélie CAHARD (pro)/Amélie CAHARD 1.jpg">
+    <img src="../Amélie CAHARD (pro)/Amélie CAHARD 2.jpg">
+</div>
+
+<div class="bio">
+    <h2>Biographie</h2>
+    <p>Biographie à compléter.</p>
+</div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+    <img id="lightbox-img">
+</div>
+
+<script>
+const lightbox=document.getElementById('lightbox');
+const lightboxImg=document.getElementById('lightbox-img');
+
+document.querySelectorAll('.artist-gallery img').forEach(img=>{
+img.addEventListener('click',()=>{
+lightbox.style.display='block';
+lightboxImg.src=img.src;
+});
+});
+
+lightbox.addEventListener('click',()=>{
+lightbox.style.display='none';
+});
+</script>
+
+</body>
+</html>
